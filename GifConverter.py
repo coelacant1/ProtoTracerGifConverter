@@ -1,10 +1,10 @@
 from PIL import Image
 import io
 
-inputFile = "Example Files\Bonk.gif"
-outputFile = "Output\Bonk.h"
-outputPic = "Output\Pictures\Bonk"
-name = "Bonk"
+inputFile = "Example Files\\Noise.gif"
+outputFile = "Output\\Noise.h"
+outputPic = "Output\\Pictures\\Noise"
+name = "Noise"
 
 class Frame:
     data = []
@@ -56,7 +56,7 @@ def GetImageSequence(image, className):
     
     data += "\tstatic const uint8_t rgbColors[];\n\n"
 
-    data += "\tImage image = Image(frame0001, rgbColors, " + str(w) + ", " + str(h) + ", "  + str(int(len(palette) / 3)) + ");\n\n"
+    data += "\tImage image = Image(frame0000, rgbColors, " + str(w) + ", " + str(h) + ", "  + str(int(len(palette) / 3) - 1) + ");\n\n"
     data += "public:\n"
     data += "\t" + className + "Sequence(Vector2D size, Vector2D offset, float fps) : ImageSequence(&image, sequence, (unsigned int)" + str(frameCount) + ", fps) {\n"
     data += "\t\timage.SetSize(size);\n"
