@@ -1,10 +1,10 @@
 from PIL import Image
 import io
 
-inputFile = "Example Files\\Noise.gif"
-outputFile = "Output\\Noise.h"
-outputPic = "Output\\Pictures\\Noise"
-name = "Noise"
+inputFile = "Example Files\\Bonk.gif"
+outputFile = "Output\\Bonk.h"
+outputPic = "Output\\Pictures\\Bonk"
+name = "Bonk"
 
 class Frame:
     data = []
